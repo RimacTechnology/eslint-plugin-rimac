@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/RimacTechnology/eslint-plugin/compare/v1.1.0...v1.2.0) (2022-09-09)
+
+
+### Features
+
+* class element sorting ([08a51f6](https://github.com/RimacTechnology/eslint-plugin/commit/08a51f6445dd92bf2d4759923d1c7eaa3e3a129d))
+
 # [1.1.0](https://github.com/RimacTechnology/eslint-plugin/compare/v1.0.4...v1.1.0) (2022-07-12)
 
 

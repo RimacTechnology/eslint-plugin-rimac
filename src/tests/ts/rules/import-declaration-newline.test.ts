@@ -6,7 +6,7 @@ import {
     tsRuleTester,
 } from '../utils'
 
-// NOTE: output is formatter weirdly because this plugin should only be concerned about import new lines, other rules handle indentation
+// NOTE: output is formatter weirdly because this plugin should only be concerned about import new lines, other rules should handle indentation
 tsRuleTester.run(rule.name, rule.value, {
     invalid: [
         {

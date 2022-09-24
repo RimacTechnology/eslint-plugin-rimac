@@ -16,9 +16,9 @@ const value = createRule<Record<string, string>[], string>({
                 const comments = sourceCode.getAllComments()
 
                 for (const comment of comments) {
-                    const isTodo = comment.value.toLowerCase().includes('todo')
-                    const isFixme = comment.value.toLowerCase().includes('fixme')
-                    const hasLink = comment.value.toLowerCase().includes(url.toLowerCase())
+                    const isTodo = comment.value.includes('TODO:')
+                    const isFixme = comment.value.includes('FIXME:')
+                    const hasLink = comment.value.includes(url.toLowerCase())
 
                     // Valid todo/fixme comment
                     if ((isTodo || isFixme) && hasLink) {

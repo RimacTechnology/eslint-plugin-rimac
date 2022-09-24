@@ -153,6 +153,11 @@ const Component = () => {
     ],
     valid: [
         {
+            code: '// some random comment that contains todo and fixme:',
+            filename: TSX_FILE_PATH,
+            options,
+        },
+        {
             code: `
 const Component = () => {
     return (

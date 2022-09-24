@@ -11,6 +11,35 @@ tsRuleTester.run(rule.name, rule.value, {
     invalid: [
         {
             code: `
+import { CheckType, ValidCheckView } from '@rimac-technology/shared-components'
+import {
+    DefectiveCheckView,
+    Panel,
+    PanelOverlay,
+} from '@rimac-technology/shared-components'
+`,
+            filename: TS_FILE_PATH,
+            errors: [
+                {
+                    column: 1,
+                    line: 2,
+                    messageId: 'default',
+                },
+            ],
+            output: `
+import { 
+    CheckType,
+    ValidCheckView,
+} from '@rimac-technology/shared-components'
+import {
+    DefectiveCheckView,
+    Panel,
+    PanelOverlay,
+} from '@rimac-technology/shared-components'
+`
+        },
+        {
+            code: `
 import {
     k1, k2
 } from "something"

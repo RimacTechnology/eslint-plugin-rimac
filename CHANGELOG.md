@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/RimacTechnology/eslint-plugin/compare/v1.2.0...v1.2.1) (2022-09-26)
+
+
+### Bug Fixes
+
+* todo comments rule cant be disabled closes [#7](https://github.com/RimacTechnology/eslint-plugin/issues/7) ([393daa9](https://github.com/RimacTechnology/eslint-plugin/commit/393daa9d4ac3974861b68cec54442274a4f8ada3))
+
 # [1.2.0](https://github.com/RimacTechnology/eslint-plugin/compare/v1.1.0...v1.2.0) (2022-09-09)
 
 

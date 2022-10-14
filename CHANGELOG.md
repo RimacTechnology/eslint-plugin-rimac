@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/RimacTechnology/eslint-plugin/compare/v1.2.1...v1.3.0) (2022-10-14)
+
+
+### Features
+
+* cypress consistent action names ([705cca1](https://github.com/RimacTechnology/eslint-plugin/commit/705cca14592d0b70630baf12bea07a2dcb62d98e))
+
 ## [1.2.1](https://github.com/RimacTechnology/eslint-plugin/compare/v1.2.0...v1.2.1) (2022-09-26)
 
 

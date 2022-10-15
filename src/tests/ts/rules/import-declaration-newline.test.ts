@@ -1,5 +1,7 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 
+import dedent from 'dedent'
+
 import rule from '../../../rules/import-declaration-newline'
 import {
     TS_FILE_PATH,
@@ -10,24 +12,24 @@ import {
 tsRuleTester.run(rule.name, rule.value, {
     invalid: [
         {
-            code: `
-import {
-    k1, k2
-} from "something"
+            code: dedent`
+                import {
+                k1, k2
+                } from "something"
             `,
             filename: TS_FILE_PATH,
             errors: [
                 {
                     column: 1,
-                    line: 2,
+                    line: 1,
                     messageId: 'default',
                 },
             ],
-            output: `
-import {
-    k1,
-k2
-} from "something"
+            output: dedent`
+                import {
+                k1,
+                k2
+                } from "something"
             `,
         },
         {
@@ -45,9 +47,11 @@ k2
                     messageId: 'default',
                 },
             ],
-            output: `import { k1,
-k2,
-k3 } from "something"`,
+            output: dedent`
+                import { k1,
+                k2,
+                k3 } from "something"
+            `,
         },
         {
             code: 'import React, { useState, useEffect } from "react"',
@@ -64,13 +68,17 @@ k3 } from "something"`,
                     messageId: 'default',
                 },
             ],
-            output: `import React, {
- useState,
-useEffect } from "react"`,
+            output: dedent`
+                import React, {
+                 useState,
+                useEffect } from "react"
+            `,
         },
         {
-            code: `import React, { useState,
-useEffect } from "react"`,
+            code: dedent`
+                import React, { useState,
+                useEffect } from "react"
+            `,
             filename: TS_FILE_PATH,
             errors: [
                 {
@@ -79,20 +87,24 @@ useEffect } from "react"`,
                     messageId: 'default',
                 },
             ],
-            output: `import React, {
- useState,
-useEffect } from "react"`,
+            output: dedent`
+                import React, {
+                 useState,
+                useEffect } from "react"
+            `,
         },
     ],
     valid: [
         {
-            code: `import {
-k1,
-k2,
-k3,
-k4,
-k5
-} from 'something'`,
+            code: dedent`
+                import {
+                k1,
+                k2,
+                k3,
+                k4,
+                k5
+                } from 'something'
+            `,
             filename: TS_FILE_PATH,
         },
         {
@@ -108,10 +120,12 @@ k5
             filename: TS_FILE_PATH,
         },
         {
-            code: `import React, {
-useState,
-useEffect,
-} from 'react'`,
+            code: dedent`
+                import React, {
+                useState,
+                useEffect,
+                } from 'react'
+            `,
             filename: TS_FILE_PATH,
         },
     ],

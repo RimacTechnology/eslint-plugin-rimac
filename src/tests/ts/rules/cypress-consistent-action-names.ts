@@ -1,3 +1,5 @@
+import dedent from 'dedent'
+
 import type { CypressConsistentActionNamesOptionsType } from '../../../rules/cypress-consistent-action-names'
 import rule from '../../../rules/cypress-consistent-action-names'
 import {
@@ -17,37 +19,37 @@ const settings = {
 tsRuleTester.run<string, CypressConsistentActionNamesOptionsType[]>(rule.name, rule.value, {
     invalid: [
         {
-            code: `
-@TableActions
-export class HardwareComponentListViewPage {
-  public elements
+            code: dedent`
+                @TableActions
+                export class HardwareComponentListViewPage {
+                    public elements
 
-  constructor() {
-    this.elements = {
-      adas: () => cy.getBySelector('ADAS'),
-      addHardwareComponentButton: () => cy.getBySelector('add-hardware-component-button'),
-    }
-  }
+                    constructor() {
+                        this.elements = {
+                            adas: () => cy.getBySelector('ADAS'),
+                            addHardwareComponentButton: () => cy.getBySelector('add-hardware-component-button'),
+                        }
+                    }
 
-  public async openCreateNewHardwareComponentDialog(): Cypress.Chainable {
-    return this
-      .elements
-      .newComponentButton()
-      .click()
-  }
+                    public async openCreateNewHardwareComponentDialog(): Cypress.Chainable {
+                        return this
+                            .elements
+                            .newComponentButton()
+                            .click()
+                    }
 
-  private async flyAyay(): Cypress.Chainable {
-    return this
-      .elements
-      .newComponentButton()
-      .click()
-  }
-}
+                    private async flyAyay(): Cypress.Chainable {
+                        return this
+                            .elements
+                            .newComponentButton()
+                            .click()
+                    }
+                }
             `,
             errors: [
                 {
-                    column: 3,
-                    line: 13,
+                    column: 5,
+                    line: 12,
                     messageId: 'default',
                 },
             ],
@@ -56,33 +58,33 @@ export class HardwareComponentListViewPage {
             settings,
         }],
     valid: [{
-        code: `
-@TableActions
-export class HardwareComponentListViewPage {
-  public elements
+        code: dedent`
+            @TableActions
+            export class HardwareComponentListViewPage {
+                public elements
 
-  constructor() {
-    this.elements = {
-      adas: () => cy.getBySelector('ADAS'),
-      addHardwareComponentButton: () => cy.getBySelector('add-hardware-component-button'),
-    }
-  }
+                constructor() {
+                    this.elements = {
+                        adas: () => cy.getBySelector('ADAS'),
+                        addHardwareComponentButton: () => cy.getBySelector('add-hardware-component-button'),
+                    }
+                }
 
-  public async clickSomething(): Cypress.Chainable {
-    return this
-      .elements
-      .newComponentButton()
-      .click()
-  }
+                public async clickSomething(): Cypress.Chainable {
+                    return this
+                        .elements
+                        .newComponentButton()
+                        .click()
+                    }
 
-  private async flyAyay(): Cypress.Chainable {
-    return this
-      .elements
-      .newComponentButton()
-      .click()
-  }
-}
-            `,
+                private async flyAyay(): Cypress.Chainable {
+                    return this
+                        .elements
+                        .newComponentButton()
+                        .click()
+                }
+            }
+        `,
         filename: TS_FILE_PATH,
         options,
         settings,

@@ -18,6 +18,48 @@ jsxRuleTester.run<string, Record<string, string>[]>(rule.name, rule.value, {
     invalid: [
         {
             code: dedent`
+                //todo something is wrong
+                const hello = 1
+            `,
+            options,
+            filename: TSX_FILE_PATH,
+            errors: [
+                {
+                    line: 1,
+                    messageId: 'default',
+                },
+            ],
+        },
+        {
+            code: dedent`
+                // todo something is wrong
+                const hello = 1
+            `,
+            options,
+            filename: TSX_FILE_PATH,
+            errors: [
+                {
+                    line: 1,
+                    messageId: 'default',
+                },
+            ],
+        },
+        {
+            code: dedent`
+                // todo: something is wrong
+                const hello = 1
+            `,
+            options,
+            filename: TSX_FILE_PATH,
+            errors: [
+                {
+                    line: 1,
+                    messageId: 'default',
+                },
+            ],
+        },
+        {
+            code: dedent`
                 // FIXME: I'm not documented
                 const Component = () => {
                     return (
@@ -183,16 +225,7 @@ jsxRuleTester.run<string, Record<string, string>[]>(rule.name, rule.value, {
                      * What is happening
                      * Who am I?
                      */
-                    return (
-                        <div 
-                            props={true}
-                            // Prop dude
-                            style={{ height: '50px' }}
-                        >
-                            {/* JSX dude */}
-                            <p>Hello</p>
-                        </div>
-                    )
+                    return 1
                 }
             `,
             options,
@@ -201,16 +234,7 @@ jsxRuleTester.run<string, Record<string, string>[]>(rule.name, rule.value, {
         {
             code: dedent`
                 // TODO: something is wrong https://rimac-automobili.atlassian.net/jira/software/c/projects/QIA/5887
-                const Component = () => {
-                    return (
-                        <div 
-                            props={true}
-                            style={{ height: '50px' }}
-                        >
-                            <p>Hello</p>
-                        </div>
-                    )
-                }
+                const Component = 1
             `,
             options,
             filename: TSX_FILE_PATH,
@@ -256,15 +280,24 @@ jsxRuleTester.run<string, Record<string, string>[]>(rule.name, rule.value, {
                      * What is happening
                      *  TODO: something is wrong https://rimac-automobili.atlassian.net/jira/QIA/5887j 
                      */
-                    return (
-                        <div 
-                            props={true}
-                            style={{ height: '50px' }}
-                        >
-                            <p>Hello</p>
-                        </div>
-                    )
+                    const hello = 1
                 }
+            `,
+            options,
+            filename: TSX_FILE_PATH,
+        },
+        {
+            code: dedent`
+                // todo: something is wrong https://rimac-automobili.atlassian.net/jira/QIA/5887j'
+                const hello = 1
+            `,
+            options,
+            filename: TSX_FILE_PATH,
+        },
+        {
+            code: dedent`
+                //todo something is wrong https://rimac-automobili.atlassian.net/jira/QIA/5887j'
+                const hello = 1
             `,
             options,
             filename: TSX_FILE_PATH,

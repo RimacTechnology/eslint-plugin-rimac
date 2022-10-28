@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/RimacTechnology/eslint-plugin/compare/v1.3.1...v1.4.0) (2022-10-28)
+
+
+### Features
+
+* match more todo comments ([ecba100](https://github.com/RimacTechnology/eslint-plugin/commit/ecba100c558889eafe1d7b4cd590ea82f4703046))
+
 ## [1.3.1](https://github.com/RimacTechnology/eslint-plugin/compare/v1.3.0...v1.3.1) (2022-10-28)
 
 # [1.3.0](https://github.com/RimacTechnology/eslint-plugin/compare/v1.2.1...v1.3.0) (2022-10-14)

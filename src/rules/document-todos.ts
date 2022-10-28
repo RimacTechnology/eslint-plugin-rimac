@@ -20,13 +20,25 @@ const value = createRule<Record<string, string>[], string>({
                     const isFixme = comment.value.includes('FIXME:')
                     const hasLink = comment.value.includes(url.toLowerCase())
 
+                    const startsWithTodo = comment
+                        .value
+                        .trimStart()
+                        .toLowerCase()
+                        .startsWith('todo')
+
+                    const startsWithFixme = comment
+                        .value
+                        .trimStart()
+                        .toLowerCase()
+                        .startsWith('fixme')
+
                     // Valid todo/fixme comment
-                    if ((isTodo || isFixme) && hasLink) {
+                    if ((isTodo || isFixme || startsWithFixme || startsWithTodo) && hasLink) {
                         continue
                     }
 
                     // Regular comment
-                    if (!isTodo && !isFixme) {
+                    if (!isTodo && !isFixme && !startsWithFixme && !startsWithTodo) {
                         continue
                     }
 

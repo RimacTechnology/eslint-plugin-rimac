@@ -55,26 +55,6 @@ tsRuleTester.run(rule.name, rule.value, {
                     private static elephant = "1"
                     private static flower = "1"
 
-                    protected static dummy() {
-                        return "1"
-                    }
-
-                    protected static egg() {
-                        return "1"
-                    }
-
-                    protected static farm() {
-                        return "1"
-                    }
-
-                    protected static daddy = 1
-                    protected static emily = 1
-                    protected static fluff = 1
-
-                    protected doby = 1
-                    protected emancipation = 1
-                    protected faker = 1
-
                     public dark = 1
                     public exist = 1
                     public flip = 1
@@ -135,19 +115,7 @@ tsRuleTester.run(rule.name, rule.value, {
                         return "1"
                     }
 
-                    protected addSome() {
-                        return "3"
-                    }
-
-                    protected centSome() {
-                        return "3"
-                    }
-
                     public addSomethingElse() {
-                        return "3"
-                    }
-
-                    protected beatSome() {
                         return "3"
                     }
 
@@ -199,21 +167,6 @@ tsRuleTester.run(rule.name, rule.value, {
                 private static drums = "1"
                 private static elephant = "1"
                 private static flower = "1"
-                protected static dummy() {
-                        return "1"
-                    }
-                protected static egg() {
-                        return "1"
-                    }
-                protected static farm() {
-                        return "1"
-                    }
-                protected static daddy = 1
-                protected static emily = 1
-                protected static fluff = 1
-                protected doby = 1
-                protected emancipation = 1
-                protected faker = 1
                 public dark = 1
                 public exist = 1
                 public flip = 1
@@ -239,15 +192,6 @@ tsRuleTester.run(rule.name, rule.value, {
                         return "2"
                     }
                 set come() {
-                        return "3"
-                    }
-                protected addSome() {
-                        return "3"
-                    }
-                protected beatSome() {
-                        return "3"
-                    }
-                protected centSome() {
                         return "3"
                     }
                 public addSomethingElse() {
@@ -325,26 +269,6 @@ tsRuleTester.run(rule.name, rule.value, {
                     private static elephant = "1"
                     private static flower = "1"
 
-                    protected static dummy() {
-                        return "1"
-                    }
-
-                    protected static egg() {
-                        return "1"
-                    }
-
-                    protected static farm() {
-                        return "1"
-                    }
-
-                    protected static daddy = 1
-                    protected static emily = 1
-                    protected static fluff = 1
-
-                    protected doby = 1
-                    protected emancipation = 1
-                    protected faker = 1
-
                     public dark = 1
                     public exist = 1
                     public flip = 1
@@ -378,18 +302,6 @@ tsRuleTester.run(rule.name, rule.value, {
                     }
 
                     set come() {
-                        return "3"
-                    }
-
-                    protected addSome() {
-                        return "3"
-                    }
-
-                    protected beatSome() {
-                        return "3"
-                    }
-
-                    protected centSome() {
                         return "3"
                     }
 

@@ -7,26 +7,6 @@ export const getType = (element: ClassElement) => {
     const isMethod = element.type === AST_NODE_TYPES.MethodDefinition
     const isProperty = element.type === AST_NODE_TYPES.PropertyDefinition
 
-    // Protected methods
-    if (isMethod && !element.static && element.accessibility === 'protected') {
-        return ELEMENTS.PROTECTED_METHODS
-    }
-
-    // Protected properties
-    if (isProperty && !element.static && element.accessibility === 'protected') {
-        return ELEMENTS.PROTECTED_PROPERTIES
-    }
-
-    // Protected static methods
-    if (isMethod && element.static && element.accessibility === 'protected') {
-        return ELEMENTS.PROTECTED_STATIC_METHODS
-    }
-
-    // Protected static properties
-    if (isProperty && element.static && element.accessibility === 'protected') {
-        return ELEMENTS.PROTECTED_STATIC_PROPERTIES
-    }
-
     // Public static methods
     if (isMethod && element.static && element.accessibility === 'public') {
         return ELEMENTS.PUBLIC_STATIC_METHODS

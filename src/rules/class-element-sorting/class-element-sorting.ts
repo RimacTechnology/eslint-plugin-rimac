@@ -70,7 +70,7 @@ const value = createRule({
                  * have the same position, the element from the unsorted list is in the correct place.
                  *
                  * If when comparing elements, positions don't match, it means that the element from unsorted
-                 * list was moved to another location in the sorted list and the class elements sequence is incorrect
+                 * list was moved to another location in the sorted list and the class element sequence is incorrect
                  * and needs fixing.
                  *
                  */

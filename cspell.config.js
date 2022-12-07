@@ -3,7 +3,6 @@ const config = {
         "rimac",
         "stylelint",
         "packagerc",
-        "loglevel",
         "pinst",
         "commitlint",
         "conventionalcommits",

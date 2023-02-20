@@ -31,7 +31,7 @@ tsRuleTester.run(rule.name, rule.value, {
                         return "1"
                     }
 
-                    static amstrong = "1"
+                    static amanda = "1"
                     static beta = "1"
                     static cyprus = "1"
 
@@ -158,7 +158,7 @@ tsRuleTester.run(rule.name, rule.value, {
                 private static crickets() {
                         return "1"
                     }
-                static amstrong = "1"
+                static amanda = "1"
                 static beta = "1"
                 static cyprus = "1"
                 public static delta = "1"
@@ -257,7 +257,7 @@ tsRuleTester.run(rule.name, rule.value, {
                         return "1"
                     }
 
-                    static amstrong = "1"
+                    static amanda = "1"
                     static beta = "1"
                     static cyprus = "1"
 

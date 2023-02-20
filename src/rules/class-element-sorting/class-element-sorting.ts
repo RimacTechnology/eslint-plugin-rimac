@@ -36,10 +36,9 @@ const value = createRule({
                 }
 
                 // Sort class elements into the correct order
-                node.body.forEach((element) => { // @ts-expect-error
+                node.body.forEach((element) => {
                     const type = getType(element)
 
-                    // @ts-expect-error
                     sortedElementsDictionary[type].push(element)
                 })
 
@@ -94,8 +93,8 @@ const value = createRule({
                 }
 
                 // Go trough each element and append it to a single string that becomes the class content
-                const fixedClassContent = sortedElementList.reduce((fixedClassContentAccumulator, element) => { // @ts-expect-error
-                    const text = sourceCode.getText(element) // @ts-expect-error
+                const fixedClassContent = sortedElementList.reduce((fixedClassContentAccumulator, element) => {
+                    const text = sourceCode.getText(element)
                     const comments = sourceCode.getCommentsBefore(element)
 
                     // Comments are given in the reverse order of

@@ -38,7 +38,7 @@ tsRuleTester.run<string, CypressConsistentActionNamesOptionsType[]>(rule.name, r
                             .click()
                     }
 
-                    private async flyAyay(): Cypress.Chainable {
+                    private async flyAway(): Cypress.Chainable {
                         return this
                             .elements
                             .newComponentButton()
@@ -77,7 +77,7 @@ tsRuleTester.run<string, CypressConsistentActionNamesOptionsType[]>(rule.name, r
                         .click()
                     }
 
-                private async flyAyay(): Cypress.Chainable {
+                private async flyAway(): Cypress.Chainable {
                     return this
                         .elements
                         .newComponentButton()

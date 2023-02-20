@@ -6,14 +6,8 @@
         "strict": true,
         "esModuleInterop": true,
         "types": [],
-        "lib": [
-            "es2015",
-            "es2017",
-            "esnext"
-        ],
+        "lib": ["es2015", "es2017", "esnext"],
         "experimentalDecorators": true
     },
-    "include": [
-        "file.tsx"
-    ]
+    "include": ["file.tsx"]
 }

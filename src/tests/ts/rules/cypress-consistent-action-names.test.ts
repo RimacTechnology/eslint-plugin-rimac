@@ -56,7 +56,8 @@ tsRuleTester.run<string, CypressConsistentActionNamesOptionsType[]>(rule.name, r
             filename: TS_FILE_PATH,
             options,
             settings,
-        }],
+        }
+    ],
     valid: [{
         code: dedent`
             @TableActions

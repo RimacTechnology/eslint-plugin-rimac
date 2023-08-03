@@ -1,6 +1,6 @@
 {
     "name": "@rimac-technology/eslint-plugin",
-    "version": "1.4.2",
+    "version": "1.5.0",
     "description": "Custom eslint rules",
     "bugs": {
         "url": "https://github.com/RimacTechnology/eslint-plugin/issues"

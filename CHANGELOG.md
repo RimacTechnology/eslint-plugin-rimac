@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/RimacTechnology/eslint-plugin/compare/v1.4.2...v1.5.0) (2023-08-03)
+
+
+### Features
+
+* forbid throw new error ([edd5694](https://github.com/RimacTechnology/eslint-plugin/commit/edd5694f750e282e2307b2bb3a7f65365528d676))
+
 ## [1.4.2](https://github.com/RimacTechnology/eslint-plugin/compare/v1.4.1...v1.4.2) (2023-02-20)
 
 ## [1.4.1](https://github.com/RimacTechnology/eslint-plugin/compare/v1.4.0...v1.4.1) (2022-11-22)
